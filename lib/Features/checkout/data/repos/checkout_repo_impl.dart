@@ -6,13 +6,12 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
 class CheckoutRepoImpl extends CheckoutRepo {
-  final StripeService stripeService = StripeService();
   @override
   Future<Either<Failure, void>> makePayment({
     required PaymentIntentInputModel paymentIntentInputModel,
   }) async {
     try {
-      await stripeService.makePayment(
+      await StripeService().makePayment(
         paymentIntentInputModel: paymentIntentInputModel,
       );
 

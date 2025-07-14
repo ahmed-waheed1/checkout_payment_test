@@ -299,7 +299,7 @@ curl https://api.stripe.com/v1/customers \
 
 ```dart
 // Use simple payment without customer
-await stripeService.makeSimplePayment(amount: "100");
+await StripeService().makeSimplePayment(amount: "100");
 ```
 
 ### Issue: API Key Errors

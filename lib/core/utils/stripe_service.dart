@@ -8,6 +8,12 @@ import 'package:dio/dio.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 
 class StripeService {
+  StripeService._();
+
+  static final StripeService _instance = StripeService._();
+
+  factory StripeService() => _instance;
+
   final ApiService apiService = ApiService();
   static const String _stripeApiVersion = '2023-08-16';
 
